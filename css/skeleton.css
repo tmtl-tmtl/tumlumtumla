@@ -318,7 +318,7 @@ p {
 }
 
 
-/* Links
+/* Links (including img)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
     color: #1EAEDB;
@@ -329,6 +329,10 @@ a:hover {
     cursor: url("../images/fish_sauce_illust_hover.png"), auto;
 }
 
+a img {
+    border-bottom: 0;
+   text-decoration: none;
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
