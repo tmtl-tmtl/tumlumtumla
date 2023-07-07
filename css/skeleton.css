@@ -1,10 +1,10 @@
 :root {
-    --font-body-family: "Be Vietnam", sans-serif;
+    --font-body-family: "Gulim", "Be Vietnam Light", sans-serif;
     --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
-    --color-bg-1: #FFD300;
-    --color-bg-2: #E6FF9E;
-    --color-accent-1: red;
-    --color-accent-2: white;
+    --color-bg-1: #F0EBC0;
+    --color-bg-2: white;
+    --color-accent-1: black;
+    --color-accent-2: #4d7358;
     --color-accent-3: #35800B;
 }
 
@@ -15,7 +15,8 @@
     font-family: var(--font-body-family);
 }
 
-p, a {
+p,
+a {
     font-family: var(--font-body-family);
 }
 
@@ -25,7 +26,7 @@ p, a {
 
 a:hover {
     text-decoration: underline wavy;
-    color: var(--color-bg-2);
+    color: var(--color-accent-2);
 }
 
 h1 {
@@ -44,54 +45,74 @@ p {
     cursor: text;
 }
 
-.home header ul{
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: 1rem;
+
+.home {
+    text-transform: uppercase;
+}
+
+.home .content {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4.03125rem;
+    padding-top: 10%;
+    padding-left: 1em;
+}
+
+.home .content ul {
     list-style: none;
-    justify-content: space-between;
-    width: 35%;
+    margin-top: 2rem;
 }
 
-.eventhover:hover {
-    content: url(../images/nav_thumbs/bo_la_lot_3.png);
+.home blockquote {
+    margin: -.6rem 1.9rem;
+    font-size: 2rem;
 }
 
-.contacthover:hover {
-    content: url(../images/nav_thumbs/bo_la_lot_3.png);
+#popup_boxo {
+    max-width: 24em;
+    font-size: 1.1rem;
+    line-height: 1.2em;
+    border: 1px solid black;
+    margin-left: 2em;
+    margin-top: -2em;
+    background-color: var(--color-bg-2);
+    position: relative;
 }
 
-.home .intro {
-    display: flex;
-    flex-direction: row;
+.popupCloseButton {
+    float: right;
+    padding: 6px;
+    padding-top: 0;
 }
 
-.home .intro .header {
-    width: 100%;
+#popup_boxo p {
+    padding: 1rem;
+    margin-bottom: 0;
+    margin-top: .3rem;
 }
 
-.home .intro .header img {
-    max-width: calc(100% - 8vh);
+/* toggle display */
+.hide {
+    opacity: 0;
+    transition: ease-out all 200ms;
+    z-index: -999;
 }
 
-.home .intro .about {
-    margin: auto;
-width: 90%;
-margin-right: 2rem;
+.show {
+    animation-name: box-fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    z-index: 999;
 }
 
-.upcomingevents {
-    margin: 2rem;
-    margin-right: 4rem;
-    text-align: end;
-}
 footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
     text-align: center;
     font-size: .5rem;
     opacity: 50%;
-    text-transform: uppercase;
-    margin-top: 10%;
 }
 
 
@@ -151,19 +172,19 @@ hr {
 
 .contact-form form {
     display: flex;
-flex-direction: column;
-max-width: 19rem;
+    flex-direction: column;
+    max-width: 19rem;
 }
 
 .contact header ul {
     list-style: none;
-display: flex;
-justify-content: space-evenly;
-position: absolute;
-top: 0;
-left: 0;
-width: 50%;
-text-transform: uppercase;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    text-transform: uppercase;
 }
 
 .contact header a {
@@ -175,53 +196,52 @@ text-transform: uppercase;
     background-color: var(--color-bg-2);
     border: none;
     padding: .5rem;
-    width: ;
     margin: .5rem;
     text-align: center;
-    }
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* mobile */
-@media (max-width: 400px) {
-
-}
+@media (max-width: 400px) {}
 
 /* Smaller than phablet */
-@media (max-width: 550px) {
-    
-}
+@media (max-width: 550px) {}
 
 /* Larger than tablet */
 @media (max-width: 750px) {
-    .home .intro {flex-direction: column;}
+    .home .intro {
+        flex-direction: column;
+    }
+
     .home .intro .header img {
         width: 100%;
-        }
+    }
 
-        .gallery {
-            margin-left: 1rem;
-        }
+    .gallery {
+        margin-left: 1rem;
+    }
 
-        .gallery img {
-            width: 40%;
-            margin: 0;
-        }
+    .gallery img {
+        width: 40%;
+        margin: 0;
+    }
 
-        .home header ul {
-            width: 100%;
-            justify-content: inherit;
-            gap: 2rem;
-        }
+    .home header ul {
+        width: 100%;
+        justify-content: inherit;
+        gap: 2rem;
+    }
 
-        .home .intro .about {
-            margin-right: auto;
-        }
-        .upcomingevents {
-            border-top: 1px solid;
-            margin: 1rem;
-        }
+    .home .intro .about {
+        margin-right: auto;
+    }
+
+    .upcomingevents {
+        border-top: 1px solid;
+        margin: 1rem;
+    }
 }
 
 /* Larger than desktop */
@@ -238,7 +258,7 @@ text-transform: uppercase;
     pointer-events: none;
 }
 
-.flier > * {
+.flier>* {
     /* Adjust animation duration to change the element’s speed */
     animation: fly 50s linear infinite;
     pointer-events: none !important;
