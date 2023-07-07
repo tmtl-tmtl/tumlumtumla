@@ -211,12 +211,19 @@ hr {
 
 /* Larger than tablet */
 @media (max-width: 750px) {
-    .home .intro {
-        flex-direction: column;
+    .home img {
+        width: 80%;
+        height: auto;
     }
 
-    .home .intro .header img {
-        width: 100%;
+    .home .content {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .home blockquote {
+        margin: 0 1.9rem;
+        font-size: 1.5rem;
     }
 
     .gallery {
@@ -226,21 +233,6 @@ hr {
     .gallery img {
         width: 40%;
         margin: 0;
-    }
-
-    .home header ul {
-        width: 100%;
-        justify-content: inherit;
-        gap: 2rem;
-    }
-
-    .home .intro .about {
-        margin-right: auto;
-    }
-
-    .upcomingevents {
-        border-top: 1px solid;
-        margin: 1rem;
     }
 }
 
