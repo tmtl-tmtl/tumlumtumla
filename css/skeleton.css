@@ -1,19 +1,20 @@
 :root {
     --font-body-family: "Gulim", "Be Vietnam Light", sans-serif;
     --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
-    --color-bg-1: #FFF6A3;
-    --color-bg-2: white;
-    --color-accent-1: black;
-    --color-accent-2: #4d7358;
-    --color-accent-3: #35800B;
+    --color-bg-1: #fef6e4;
+    --color-bg-2: #FAF6CF;
+    --color-accent-1: #A5B240;
+    --color-accent-2: #AAA22A;
+    --color-accent-3: #8E5A45;
 }
 
 .home {
-    background-color: var(--color-bg-1);
+    margin: 1rem;
     color: var(--color-accent-1);
     cursor: url("../images/cursor_fishsauce.png"), auto !important;
     font-family: var(--font-body-family);
 }
+
 
 p,
 a {
@@ -50,18 +51,43 @@ p {
     text-transform: uppercase;
 }
 
+
+img.title {
+    max-width: 50%;
+    padding-top: 15%;
+    align-content: center;
+    margin: auto;
+}
+
+
 .home .content {
+    background-image: url(../images/bg/bartavelle_pink.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     font-size: 3rem;
     font-style: normal;
     font-weight: 300;
     line-height: 4.03125rem;
-    padding-top: 10%;
-    padding-left: 1em;
 }
 
-.home .content ul {
+.home h1.main {
+    padding-top: 15%;
+    text-align: center;
+    line-height: normal;
+}
+
+.home img.header {
+    margin: auto
+}
+
+.home ul.nav {
     list-style: none;
     margin-top: 2rem;
+    position: fixed;
 }
 
 .home blockquote {
@@ -157,10 +183,9 @@ footer {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
-    border-width: 0;
-    border-top: 1px solid #E1E1E1;
+    border-top: 1px solid var(--color-accent-1);
+    width: 100vh;
+    overflow: visible;
 }
 
 /* contact page */
