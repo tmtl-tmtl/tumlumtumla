@@ -8,25 +8,26 @@
     <meta name="title" content="Tùm Lum Tùm La" />
     <meta
       name="description"
-      content="KT's Vietnamese food in the Bay Area"
-    />
+      content="KT's Vietnamese food in the Bay Area"/>
     <meta property="og:title" content="Tùm Lum Tùm La" />
     <meta property="og:image" content="images/skewer.jpg" />
     <meta property="twitter:title" content="Tùm Lum Tùm La" />
     <meta property="twitter:description" content="KT's food pop-up" />
     <meta property="twitter:image" content="images/skewer.jpg" />
-
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/skeleton.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-163698861-1"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=UA-163698861-1">
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
 
@@ -38,69 +39,66 @@
       gtag("config", "UA-163698861-1");
     </script>
   </head>
-  <body class="home">
+  <body>
     <ul class="nav">
-      <li>Contact</li>
-      <li class="pop-up-link"><a class="trigger_popup">About</a>
-        <div id="popup_boxo" class="hide">
-          <span class="helper"></span>
-            <div>
-              <div class="popupCloseButton">&times;</div>
-              <p>
-                Tùm Lum Tùm La means 'All over the place' in Vietnamese, usually
-                something a parent will yell to an unruly child. KT is a
-                Vietnamese-Chinese chef seeking to embrace their unruliness via
-                their cooking.
-              </p>
-            </div>
-          </div>
+      <li><a href="#contact-me">Contact</a></li>
+      <li><a href="#about-me">About</a>
         </li>
       </ul>
-    
-    <div class="content">
-     <img class="title" src="assets/Brand/TLTA_2.png">
-     <span class="caption">Vietnamese-Chinese food in the Bay Area. Events, Catering, Pop-Ups, & More.</span>
-<!--       
-      <ul class="nav">
-        <li>
-          Private Cooking
-          <br />
-          <blockquote>
-            <a
-              href="https://tanakajpeg.notion.site/KT-Private-Cooking-Price-Breakdown-8e7c310f3c5b4ea7963941e304b1cd34?pvs=4"
-              target="_blank"
-              >Price Breakdown</a
-            >
-          </blockquote>
-          <blockquote>
-            <a href="https://www.instagram.com/tum.lum.tum.la/" target="_blank"
-              >DM for inquiries</a
-            >
-          </blockquote>
-        </li>
-        <li class="pop-up-link">
-          <a class="trigger_popup">About</a>
-
-          <div id="popup_boxo" class="hide">
-            <span class="helper"></span>
-            <div>
-              <div class="popupCloseButton">&times;</div>
-              <p>
-                Tùm Lum Tùm La means 'All over the place' in Vietnamese, usually
-                something a parent will yell to an unruly child. KT is a
-                Vietnamese-Chinese chef seeking to embrace their unruliness via
-                their cooking.
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
+    <div class="intro">
+      <img class="title" src="assets/Brand/TLTA_2.png">
+      <span class="caption"></span>
     </div>
-
-    <footer role="contentinfo">
-      <p>hand-coded by <a href="http://tanakajpeg.com">e tanaka</a></p>
-    </footer> -->
-    <script>
+    <div class="row">
+      <div id="about-me" class="column">
+        <span>Tùm Lum Tùm La<br>(Thoum - Loum - Thoum - La)</span>
+        <p>Tùm Lum Tùm La is a Vietnamese phrase that is thrown around by parents to describe behavior and interests to be "all over the place" or messy.
+        </p>
+        <p>
+        Deciding to embrace the term, Bay-Area based KT created Tùm Lum Tùm La as a way to express themselves through different mediums.</p>
+        <p>Follow the journey as TLTA shares the fruits of their creative endeavors in and outside of the kitchen. Look forward to seeing food pop-ups, photography, zines, recipes, and more!
+        </p></div>
+      <div class="column"><img src="./images/bg/vietnam.jpg" height="300"></div>
+    </div>
+    <div class="carousel">
+      <img src="./images/events/study_1.gif"><img src="./images/events/buncha_3.jpg"><img src="./images/events/HB_2.jpg">
+      <img src="./images/events/study_1.gif"><img src="./images/events/buncha_3.jpg"><img src="./images/events/HB_2.jpg">
+    </div>
+    <div class="CTA">
+      <h1>available for</h1>
+      <ul>
+        <li>Catering</li>
+        <li>Private Events</li>
+        <li>Pop-Ups</li>
+      </ul>
+      <p>[insert whimsical illustrations here]</p>
+    </div>
+    <div id="contact-me" class="contact">
+      <div class="contact-form">
+                <form action="https://formspree.io/f/mojekzkp" method="POST">
+                    <fieldset>
+                      <div>
+                        <label for="full-name">Full Name</label>
+                        <input class="form-input" type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                      </div>
+                      <div>
+                        <label for="email-address">Email Address</label>
+                        <input class="form-input" type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                      </div>
+                        <div>
+                          <label for="message">Message</label>
+                          <textarea class="form-input" rows="5" name="message" id="message" placeholder="hello!" required=""></textarea>
+                          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                        </div>
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+           
+    </div>
+<footer>
+  <span class="caption">(c) 2026 TLTA // handcoded by <a href="http://listedwork.elinatanaka.com" target="_blank">e tanaka</a></span>
+<script>
       // Show class
       const popupLink = document.querySelectorAll(".pop-up-link");
 
@@ -120,7 +118,7 @@
         });
       }
     </script>
-    <!-- Flying Image
+     <!-- Flying Image
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="flier">
       <img
@@ -129,5 +127,8 @@
         width="150vw"
       />
     </div>
+</footer>
+    
+   
   </body>
 </html>
