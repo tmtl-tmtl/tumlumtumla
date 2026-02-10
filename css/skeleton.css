@@ -62,6 +62,7 @@ ul.nav {
     display: flex;
     flex-direction: row;
     mix-blend-mode: hard-light;
+    z-index: 999;
 }
 
 ul.nav li {
@@ -112,7 +113,7 @@ blockquote {
     animation-name: box-fade-in;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    z-index: 999;
+    z-index: 998;
 }
 
 .intro {
@@ -188,15 +189,28 @@ blockquote {
 .CTA {
     margin: auto;
     text-align: center;
-     padding: 5rem;
+     padding: 5rem 0 5rem 0;
      color: var(--color-accent-3);
-     width: 30%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
 }
 
 .CTA ul {
     padding-left: 0;
     list-style: none;
+    text-transform: uppercase;
+    line-height: 2em
 }
+
+    .CTA img {
+    margin-top: -12rem;
+    margin-right: auto;
+     margin-left: 0;
+     mix-blend-mode: multiply;
+     width: 30%;
+     position: absolute;
+    }
 
 /* event page */
 
@@ -314,34 +328,70 @@ footer .caption, footer .caption a {
 /* mobile */
 @media (max-width: 400px) {}
 
-/* Smaller than phablet */
-@media (max-width: 550px) {}
+@media (max-width: 550px) {
+    .CTA img {
+    margin-top: -5rem;
+     margin-left: -5em;
+     width: 100%;
+    opacity: 70%;
+    }
+}
+
+/* tablet or smaller */
+@media (max-width: 810px) {
+.intro {
+    height: 60vh;
+}
+ul.nav {
+    margin: 0;
+    flex-direction: column;
+    padding: 0;
+    left: 0;
+}
+ul.nav li {
+    line-height: 4rem !important;
+  padding-left: 0 !important;
+}
+img.title {
+    max-width: 90%;
+}
+.row {
+    flex-direction: column;
+}
+.column {
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+
+
+    .contact {
+    padding: 0rem;
+}
+
+.contact-form {
+    max-width: 100%;
+}
+
+.contact-form > form:nth-child(1) > fieldset:nth-child(1) {
+  border: none;
+}
+
+.contact-form button {
+    margin-left: auto;
+float: ;
+align-content: center;
+display: grid;
+}
+
+.contact-form {
+    padding-bottom: 2rem;
+}
+
+}
 
 /* Larger than tablet */
-@media (max-width: 750px) {
-    .home img {
-        width: 80%;
-        height: auto;
-    }
+@media (max-width: 810px) {
 
-    .home .content {
-        font-size: 2rem;
-        line-height: 1.5;
-    }
-
-    .home blockquote {
-        margin: 0 1.9rem;
-        font-size: 1.5rem;
-    }
-
-    .gallery {
-        margin-left: 1rem;
-    }
-
-    .gallery img {
-        width: 40%;
-        margin: 0;
-    }
 }
 
 /* Larger than desktop */
