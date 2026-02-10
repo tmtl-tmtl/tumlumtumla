@@ -1,27 +1,33 @@
 :root {
-    --font-body-family: "Gulim", "Be Vietnam Light", sans-serif;
-    --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
-    --color-bg-1: #FFF6A3;
-    --color-bg-2: white;
-    --color-accent-1: black;
-    --color-accent-2: #4d7358;
-    --color-accent-3: #35800B;
+    --font-body-family: "Fragment Mono", "Be Vietnam", Helvetica, monospace;
+    --font-heading-family: "ABC Synt Variable", 'Times New Roman', Times, serif;
+    --color-bg-1: #FFC0D6;
+    --color-bg-2: #F7FFDF;
+    --color-accent-1: #172100;
+    --color-accent-2: #FF3D00;
+    --color-accent-3: #516AF5;
+    --color-accent-4: #FFF830;
+    --color-accent-5: #C8FE2F;
+    --color-accent-6: #F88383;
 }
 
-.home {
+body, html {
     background-color: var(--color-bg-1);
     color: var(--color-accent-1);
     cursor: url("../images/cursor_fishsauce.png"), auto !important;
     font-family: var(--font-body-family);
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 p,
 a {
     font-family: var(--font-body-family);
+    color: var();
 }
 
-.home a {
-    color: var(--color-accent-1);
+h1 {
+    font-family: var(--font-heading-family);
 }
 
 a:hover {
@@ -29,15 +35,8 @@ a:hover {
     color: var(--color-accent-2);
 }
 
-h1 {
-    font-family: var(--font-heading-family);
-}
-
 a {
     text-decoration: none;
-}
-
-.home a {
     cursor: url("../images/cursor_fishsauce_2.png"), auto !important;
 }
 
@@ -45,26 +44,37 @@ p {
     cursor: text;
 }
 
-
-.home {
-    text-transform: uppercase;
+button {
+    border: none;
 }
 
-.home .content {
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 4.03125rem;
-    padding-top: 10%;
-    padding-left: 1em;
+img.title {
+    max-width: 50%;
+    padding-top: 0;
+    align-content: center;
+    margin: auto;
 }
 
-.home .content ul {
+ul.nav {
     list-style: none;
     margin-top: 2rem;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    mix-blend-mode: hard-light;
+    z-index: 999;
 }
 
-.home blockquote {
+ul.nav li {
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+ul.nav li a {
+    background: var(--color-bg-1);
+    padding: 1rem;
+}
+
+blockquote {
     margin: -.6rem 1.9rem;
     font-size: 2rem;
 }
@@ -103,18 +113,104 @@ p {
     animation-name: box-fade-in;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    z-index: 999;
+    z-index: 998;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    padding: 1rem;
+.intro {
+    background-image: url(../images/bg/bartavelle_pink.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--font-body-family);
+    z-index: 1;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+  padding: 5em;
+  font-family: var(--font-body-family);
+  color: var(--color-accent-2);
+  align-self: center;
+}
+
+.column span {
+   font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.carousel:hover .group {
+      animation-play-state: paused;
+    }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+ .group {
+    will-change: transform;
+  animation: scrolling 120s linear infinite;
+  flex-direction: row;
+  display: inline-flex;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+.carousel img {
+    max-height: 400px;
+    border: 3px var(--color-bg-1) solid;
+}
+
+.CTA {
+    margin: auto;
     text-align: center;
-    font-size: .5rem;
-    opacity: 50%;
+     padding: 5rem 0 5rem 0;
+     color: var(--color-accent-3);
+     width: 100%;
+     display: flex;
+     flex-direction: column;
 }
 
+.CTA ul {
+    padding-left: 0;
+    list-style: none;
+    text-transform: uppercase;
+    line-height: 2em
+}
+
+    .CTA img {
+    margin-top: -12rem;
+    margin-right: auto;
+     margin-left: 0;
+     mix-blend-mode: multiply;
+     width: 30%;
+     position: absolute;
+    }
 
 /* event page */
 
@@ -157,83 +253,145 @@ footer {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
-    border-width: 0;
-    border-top: 1px solid #E1E1E1;
+    border-top: 1px solid var(--color-accent-1);
+    width: 100vh;
+    overflow: visible;
 }
 
 /* contact page */
 
 .contact {
     background-color: var(--color-accent-3);
-    color: var(--color-accent-2);
-}
-
-.contact-form form {
+    color: var(--color-accent-4);
     display: flex;
     flex-direction: column;
-    max-width: 19rem;
+    padding: 5rem;
 }
 
-.contact header ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
+.contact-form {
+    max-width: 50%;
+    margin: auto;
+}
+
+.contact fieldset {
+    padding: 4rem;
+}
+
+.contact fieldset div {
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    width: 90%;
+  background-color: var(--color-accent-3);
+  padding: 1rem;
+  border: var(--color-bg-2) 1px solid;
+  color: var(--color-bg-2);
+  text-transform: uppercase;
+}
+
+.form-input:focus-visible {
+    outline: var(--color-accent-5) solid 2px;
+}
+
+.contact button {
+    margin: 1rem auto auto auto;
+  padding: 1rem;
+  outline: var(--color-bg-2) solid 1px;
+  border-radius: 0;
+  color: var(--color-bg-2);
+  background-color: var(--color-accent-3);
+  text-transform: uppercase;
+    transition-duration: 200ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact button:hover {
+    background-color: var(--color-accent-5);
+  color: var(--color-accent-6);
+  padding-bottom: 1rem;
+  outline: var(--color-accent-6) solid 1px;
+}
+
+footer {
+    background-color: var(--color-accent-3);
+}
+footer .caption, footer .caption a {
+    color: var(--color-accent-6);
     text-transform: uppercase;
+    font-size: 0.8rem;
 }
-
-.contact header a {
-    color: var(--color-accent-2);
-}
-
-.contact-form input.button-primary {
-    color: var(--color-accent-3);
-    background-color: var(--color-bg-2);
-    border: none;
-    padding: .5rem;
-    margin: .5rem;
-    text-align: center;
-}
-
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* mobile */
 @media (max-width: 400px) {}
 
-/* Smaller than phablet */
-@media (max-width: 550px) {}
+@media (max-width: 550px) {
+    .CTA img {
+    margin-top: -5rem;
+     margin-left: -5em;
+     width: 100%;
+    opacity: 70%;
+    }
+}
+
+/* tablet or smaller */
+@media (max-width: 810px) {
+.intro {
+    height: 60vh;
+}
+ul.nav {
+    margin: 0;
+    flex-direction: column;
+    padding: 0;
+    left: 0;
+}
+ul.nav li {
+    line-height: 4rem !important;
+  padding-left: 0 !important;
+}
+img.title {
+    max-width: 90%;
+}
+.row {
+    flex-direction: column;
+}
+.column {
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+
+
+    .contact {
+    padding: 0rem;
+}
+
+.contact-form {
+    max-width: 100%;
+}
+
+.contact-form > form:nth-child(1) > fieldset:nth-child(1) {
+  border: none;
+}
+
+.contact-form button {
+    margin-left: auto;
+float: ;
+align-content: center;
+display: grid;
+}
+
+.contact-form {
+    padding-bottom: 2rem;
+}
+
+}
 
 /* Larger than tablet */
-@media (max-width: 750px) {
-    .home img {
-        width: 80%;
-        height: auto;
-    }
+@media (max-width: 810px) {
 
-    .home .content {
-        font-size: 2rem;
-        line-height: 1.5;
-    }
-
-    .home blockquote {
-        margin: 0 1.9rem;
-        font-size: 1.5rem;
-    }
-
-    .gallery {
-        margin-left: 1rem;
-    }
-
-    .gallery img {
-        width: 40%;
-        margin: 0;
-    }
 }
 
 /* Larger than desktop */
