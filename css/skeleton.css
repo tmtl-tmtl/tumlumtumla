@@ -147,6 +147,7 @@ blockquote {
 .carousel {
     display: flex;
     flex-direction: row;
+    
     overflow-x: scroll;
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -154,13 +155,34 @@ blockquote {
     /* Firefox */
 }
 
+.carousel:hover .group {
+      animation-play-state: paused;
+    }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .carousel::-webkit-scrollbar {
     display: none;
 }
 
+ .group {
+    will-change: transform;
+  animation: scrolling 120s linear infinite;
+  flex-direction: row;
+  display: inline-flex;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
 .carousel img {
     max-height: 400px;
+    border: 3px var(--color-bg-1) solid;
 }
 
 .CTA {
