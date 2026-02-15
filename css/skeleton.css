@@ -117,8 +117,11 @@ blockquote {
 }
 
 .intro {
-    background-image: url(../images/bg/bartavelle_pink.jpg);
+    background-image: url(../images/bg/bartavelle_pink.png);
     background-size: cover;
+      background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -204,7 +207,7 @@ blockquote {
 }
 
     .CTA img {
-    margin-top: -12rem;
+    margin-top: -7rem;
     margin-right: auto;
      margin-left: 0;
      mix-blend-mode: multiply;
