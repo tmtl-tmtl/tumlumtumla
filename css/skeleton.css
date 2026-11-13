@@ -14,10 +14,21 @@
 body, html {
     background-color: var(--color-bg-1);
     color: var(--color-accent-1);
-    cursor: url("../images/cursor_fishsauce.png"), auto !important;
+    /* cursor: url("../images/cursor_fishsauce.png"), auto !important; */
     font-family: var(--font-body-family);
     margin: 0;
     scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../images/bg/bartavelle_pink.png);
+    background-size: cover;
+      background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+    width: 100%;
+    font-family: var(--font-body-family);
+    z-index: 1;
 }
 
 p,
@@ -37,7 +48,7 @@ a:hover {
 
 a {
     text-decoration: none;
-    cursor: url("../images/cursor_fishsauce_2.png"), auto !important;
+    /* cursor: url("../images/cursor_fishsauce_2.png"), auto !important; */
 }
 
 p {
@@ -50,28 +61,27 @@ button {
 
 img.title {
     max-width: 50%;
-    padding-top: 0;
+    padding-top: 15%;
     align-content: center;
+    display: block;
     margin: auto;
 }
 
 ul.nav {
+    margin-top: 0;
+    width: 100%;
     list-style: none;
-    margin-top: 2rem;
     position: fixed;
     display: flex;
     flex-direction: row;
     mix-blend-mode: hard-light;
     z-index: 999;
+    padding: 2rem;
+    background-color: var(--color-bg-1);
 }
 
 ul.nav li {
     padding: 0rem 1rem 0rem 1rem;
-}
-
-ul.nav li a {
-    background: var(--color-bg-1);
-    padding: 1rem;
 }
 
 blockquote {
@@ -116,23 +126,9 @@ blockquote {
     z-index: 998;
 }
 
-.intro {
-    background-image: url(../images/bg/bartavelle_pink.png);
-    background-size: cover;
-      background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-family: var(--font-body-family);
-    z-index: 1;
-}
-
 .row {
     display: flex;
+    padding-top: 15%;
 }
 
 .column {
@@ -148,10 +144,16 @@ blockquote {
   text-transform: uppercase;
 }
 
+#about-me {
+    background-color: var(--color-bg-1);
+  border: 2px solid var(--color-accent-2);
+  margin: 0rem 1rem 0rem 1rem;
+}
+
 .carousel {
     display: flex;
     flex-direction: row;
-    
+    margin-top: 15%;
     overflow-x: scroll;
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -186,28 +188,32 @@ blockquote {
 
 .carousel img {
     max-height: 400px;
-    border: 3px var(--color-bg-1) solid;
+    padding: 12px;
 }
 
-.CTA {
-    margin: auto;
-    text-align: center;
-     padding: 5rem 0 5rem 0;
-     color: var(--color-accent-3);
-     width: 100%;
-     display: flex;
-     flex-direction: column;
+.offerings {
+    max-width: 25rem;
+    background-color: var(--color-accent-4);
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 0;
+    margin-left: 12rem;
+    border: 1px solid var(--color-accent-2);
 }
 
-.CTA ul {
-    padding-left: 0;
+.offerings ul {
+     padding-left: 0;
     list-style: none;
     text-transform: uppercase;
     line-height: 2em
 }
 
-    .CTA img {
-    margin-top: -7rem;
+.offerings li {
+    padding-top: .5rem;
+}
+
+    .offerings img {
+    margin-top: -40rem;
     margin-right: auto;
      margin-left: 0;
      mix-blend-mode: multiply;
@@ -264,20 +270,20 @@ hr {
 /* contact page */
 
 .contact {
-    background-color: var(--color-accent-3);
     color: var(--color-accent-4);
     display: flex;
     flex-direction: column;
-    padding: 5rem;
+    padding: 1rem;
 }
 
 .contact-form {
-    max-width: 50%;
+    max-width: 100%;
     margin: auto;
 }
 
 .contact fieldset {
     padding: 4rem;
+    background-color: var(--color-accent-3)
 }
 
 .contact fieldset div {
@@ -343,29 +349,39 @@ footer .caption, footer .caption a {
 /* tablet or smaller */
 @media (max-width: 810px) {
 .intro {
-    height: 60vh;
+    height: 100%;
 }
 ul.nav {
     margin: 0;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
     left: 0;
+    border-bottom: 1px solid var(--color-accent-3);
 }
 ul.nav li {
     line-height: 4rem !important;
-  padding-left: 0 !important;
 }
 img.title {
     max-width: 90%;
+    padding-top: 45%;
 }
 .row {
     flex-direction: column;
 }
 .column {
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 3rem 2rem 1rem 2rem;
 }
 
+.offerings {
+    padding: 1rem 2rem 1rem 2rem;
+    margin-left: 0;
+}
 
+.offerings img {
+    margin-top: -7rem;
+    margin-left: 5rem;
+    width: 70%;
+}
 
     .contact {
     padding: 0rem;
